@@ -17,7 +17,13 @@ export default function App() {
 
     <ul>
       {blogs.map((blog) => (
-        <li key={blog.slug}>{blog.title}</li>
+        <div className="container" key={blog.slug}>
+          <li>
+            <img src={blog.image} alt={blog.slug} />
+            <h3>{blog.title}</h3>
+            <p>{blog.content}</p>
+          </li>
+        </div>
       ))}
     </ul>
   )
